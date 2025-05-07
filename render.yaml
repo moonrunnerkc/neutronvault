@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: neutronvault-backend
+    env: python
+    region: oregon
+    buildCommand: ""
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    workingDir: backend
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12
