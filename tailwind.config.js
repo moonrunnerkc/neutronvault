@@ -1,20 +1,25 @@
 /** @type {import('tailwindcss').Config} */
-<<<<<<< HEAD
-module.exports = {
-  content: [],
-=======
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}", // Covers all common frontend file types
+    "./src/**/**/*.{js,ts,jsx,tsx}", // Extra depth for nested components (optional)
   ],
->>>>>>> 7a91ba2b788ca5258198feb6ba940b24efdb9501
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Example: Add your brand colors here if needed
+        // primary: '#1e293b',
+      },
+      fontFamily: {
+        // Example: Add custom fonts if needed
+        // sans: ['Inter', 'sans-serif'],
+      },
+    },
   },
-  plugins: [],
-}
-<<<<<<< HEAD
-
-=======
->>>>>>> 7a91ba2b788ca5258198feb6ba940b24efdb9501
+  plugins: [
+    // Example: Add official plugins like forms or typography if needed
+    // require('@tailwindcss/forms'),
+    // require('@tailwindcss/typography'),
+  ],
+};
